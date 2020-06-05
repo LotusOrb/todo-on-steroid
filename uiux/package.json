@@ -1,0 +1,17 @@
+{
+  "name": "uiux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/html/*.html"
+  },
+  "dependencies": {
+    "alpinejs": "^2.3.5",
+    "bootstrap": "^4.5.0",
+    "parcel": "^1.12.4",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^2.0.0",
+    "tailwindcss": "^1.4.6"
+  }
+}

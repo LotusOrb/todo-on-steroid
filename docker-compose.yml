@@ -1,0 +1,40 @@
+version: "3"
+services:
+    gateway: 
+        build: ./gateway
+        command: ["node","index.js"]
+        ports: 
+            - 80:80
+    service-api :
+        build: ./service-api
+        ports: 
+            - 80
+    service-auth :
+        build: ./service-auth
+        command: ["node","index.js"]
+        ports: 
+            - 80
+    service-file-server :
+        build: ./service-file-server
+        ports: 
+            - 80
+    frontend-angular :
+        build: ./frontend-angular
+        ports: 
+            - 80
+    frontend-react :
+        build: ./frontend-react
+        ports: 
+            - 80
+    frontend-vue :
+        build: ./frontend-vuejs
+        ports: 
+            - 80
+    db:
+        image: mariadb
+        volumes: 
+            - ./storage/sqlData:/var/lib/mysql
+        environment:
+            - '.env'
+        ports: 
+            - 3306
